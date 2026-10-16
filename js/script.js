@@ -1,5 +1,5 @@
 
-const API_URL = "https://pokeapi.co/api/v2/pokemon";
+const API_URL = "https://pokeapi.co/api/v2/pokemon"; //Fetch 
 const LIMITE = 100;
 
 const containerCards = document.getElementById("cards");
@@ -56,6 +56,7 @@ async function carregarPokemons() {
 }
 
 // Criar o cartão de cada Pokémon
+//Tudo acontece dentro da função criarCard(pokemon), onde nenhum card existe previamente no HTML. O JavaScript constrói cada pedaço do zero e os insere na página.
 function criarCard(pokemon) {
   const card = document.createElement("article");
   card.className = "card";//classe Card
@@ -104,6 +105,7 @@ function criarCard(pokemon) {
     `Peso: ${pokemon.weight / 10} kg`;
 
   // Adiciona os elementos ao cartão
+  //Inserção na página via appendChild
   card.appendChild(titulo);
   card.appendChild(coracao);
   card.appendChild(imagem);
