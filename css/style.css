@@ -1,0 +1,200 @@
+/*configuração da pagina*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Área de carregamento */
+#status {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 16px;
+}
+
+/* Círculo que fica girando */
+#status.carregando::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto 15px;
+    border: 5px solid #eeeeee;
+    border-top: 5px solid #dc2626;
+    border-radius: 50%;
+    animation: girar 0.8s linear infinite;
+}
+
+/* Animação de rotação */
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+/*corpo da página*/
+
+body{
+
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f4f8;
+  color:#222222;
+  background-image: url(../assets/img/back3.jpg);
+  width: auto;
+  backface-visibility: hidden;
+  background-attachment: fixed;/*deixei a imagem travada para que nao role junto*/
+}
+
+/*cabeçalho*/
+
+header {
+  /* Usamos rgba para definir a cor RGB (#dc2626 = rgb(220, 38, 38)) + 0.2 de opacidade no fundo */
+  background-color: rgba(220, 38, 38, 0.2); 
+  color: white;
+  padding: 30px 15px;
+}
+
+header h1{
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+header h3{
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+}
+
+/*área principal*/
+
+main{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+
+}
+
+/*área principal*/
+
+.pokemon{
+  width: 100%;
+  flex-direction: column;
+  align-items: center
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px; /*espaço entre os cartoes*/
+  width: 100%;
+  
+}
+
+
+/* Estilização para o Card individual */
+.card {
+  
+  background-color: var(--card-bg);
+
+  border-radius: var(--radius);
+  border-radius: 10%;
+  padding: 1.5rem 1rem 1rem 1rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #2f3baa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  
+}
+
+/* Efeito Hover do Card */
+.card:hover {
+    transform:scale(1.1) translateY(-5px);
+    box-shadow: 0 10px 25px rgb(105, 117, 223);
+    filter:brightness(1.1);
+}
+
+/* Título do Pokémon */
+.card h2 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  color: var(--dark-poke);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-right: 25px; /* Espaço para não cobrir o botão de coração */
+}
+
+/* Botão de Coração / Favorito */
+.favorito {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #a0a0a0; /* Cor cinza quando não ativo */
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  line-height: 1;
+  outline: none;
+}
+
+.favorito:hover {
+  transform: scale(1.25);
+}
+
+
+/* Estado Ativo: Fica Vermelho quando favoritado */
+.favorito.ativo {
+  color: #ee1515;
+}
+
+/* Imagem do Pokémon */
+.card img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  margin: 0.8rem 0;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+
+/*Mensagem onde mostra carregando*/
+
+#status{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+
+
+
+
+
+/* Rodapé */
+footer {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
