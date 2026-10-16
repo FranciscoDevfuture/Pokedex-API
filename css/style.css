@@ -185,11 +185,6 @@ main{
   font-size: 18px;
 }
 
-
-
-
-
-
 /* Rodapé */
 footer {
     background-color: #222222;
@@ -197,4 +192,55 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 14px;
+}
+
+/* Tablets e telas médias (até 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 20px 10px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  header h3 {
+    font-size: 14px;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  .cards {
+    gap: 20px;
+  }
+}
+
+/*responsividade mobile*/
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  header h3 {
+    font-size: 12px;
+  }
+
+  /* Transforma o grid em coluna única para aproveitar a tela do celular */
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 15px 10px;
+  }
 }
