@@ -1,6 +1,6 @@
 
 const API_URL = "https://pokeapi.co/api/v2/pokemon";
-const LIMITE = 24;
+const LIMITE = 100;
 
 const containerCards = document.getElementById("cards");
 const statusEl = document.getElementById("status");
