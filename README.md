@@ -76,7 +76,7 @@ Não precisa instalar nada, nem de servidor. Só é preciso estar conectado à i
 
 ## Autor
 
-**Francisco Santo**
+**Francisco José Dos Santos**
 Estudante de Engenharia de Software · UniFECAF
 GitHub: [@FranciscoDevfuture](https://github.com/FranciscoDevfuture)
 
